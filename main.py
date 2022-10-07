@@ -50,6 +50,7 @@ def upload_file():
       <input type=file name=file>
       <input type=submit value=Upload>
     </form>
+    <h2>NB! Don't use within an iframe (such as the Replit interface), navigate directly in the browser, otherwise some redirects don't work.</h2>
     '''
 
 # Here, upon having uploaded the file, we ask the user for arguments
@@ -111,9 +112,7 @@ def show_results(runid):
     return str(result)
 
 
-
-
-
+# runs the test suite
 @app.route('/test')
 def test():
     return test_all()

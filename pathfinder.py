@@ -1,6 +1,6 @@
 
 def get_next_node(tentative_distances, visited):
-    for node in sorted(tentative_distances.items(), key=lambda x: x[1]): ## FIXME: performance
+    for node in sorted(tentative_distances.items(), key=lambda x: x[1]): ## FIXME: this is likely bad for performance
         if node[0] not in visited:
             return node[0]
 
